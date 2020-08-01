@@ -1,0 +1,85 @@
+---
+---
+
+// Enable <header>, <main>, <footer> inside <body> as a container
+$enable-semantic-container: true
+
+// Disable transitions for <a>, <button>, <input>
+$enable-transitions: false
+
+// Contrast
+$grey-900: darken(hsl(205, 30%, 15%), 6%)
+$grey-300: lighten(hsl(205, 14%, 68%), 6%)
+$grey-700: darken(hsl(205, 20%, 32%), 6%)
+
+// Fonts
+$sans-serif: serif
+
+// Import ./_sass/pico.scss
+@import "pico"
+
+// Lists
+*:not(nav) >
+  ul, ol
+    margin-top: $spacing-typography/2
+
+// ToC
+ul#markdown-toc,
+#markdown-toc ul
+  margin-bottom: 0
+
+#markdown-toc ul
+  margin-top: 0
+
+ul#markdown-toc,
+#markdown-toc ul
+  li
+    margin-bottom: 0
+    margin-top: 0
+
+// Enable <nav> direct child of <body> as a container
+body > nav
+  @extend .container
+
+// Prevent inline <code> and <kbd> vertical padding to exceed line-height
+code, kbd
+  padding-top: .2rem
+  padding-bottom: .2rem
+
+// Add top padding to headers direct children of <main>
+main >
+  h1:not(:first-child)
+    margin-top: $spacing-typography*2
+  h2:not(:first-child)
+    margin-top: $spacing-typography*1.75
+  h3:not(:first-child)
+    margin-top: $spacing-typography*1.5
+  h4:not(:first-child)
+    margin-top: $spacing-typography*1.25
+  h5:not(:first-child)
+    margin-top: $spacing-typography*1.125
+
+section
+  background: var(--card-background)
+  & >
+    h1
+      margin-top: $spacing-typography*2
+    h2
+      margin-top: $spacing-typography*1.75
+    h3
+      margin-top: $spacing-typography*1.5
+    h4
+      margin-top: $spacing-typography*1.25
+    h5
+      margin-top: $spacing-typography*1.125
+
+// Syntax highlighting
+.highlight, .highlighter-rouge
+  .c, .ch, .cd, .cm, .cpf, .c1, .cs, .cp
+    color: var(--code-color-5)
+  .o, .ow, .nt, .kc, .kd, .kn, .kp, .kr, .kt, .k, .kv
+    color: var(--code-color-2)
+  .s, .sa, .sb, .sc, .dl, .sd, .s2, .sh, .sx, .s1, .m, .mb, .mf, .mh, .mi, .il, .mo, .mx
+    color: var(--code-color-4)
+  .py, .nv, .vm, .na, .nb, .no
+    color: var(--code-color-3)

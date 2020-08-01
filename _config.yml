@@ -1,0 +1,10 @@
+repository: stonelore/picrobasalt
+timezone: Europe/Rome
+permalink: pretty
+
+# Plugins list
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-github-metadata
+  - jekyll-titles-from-headings
